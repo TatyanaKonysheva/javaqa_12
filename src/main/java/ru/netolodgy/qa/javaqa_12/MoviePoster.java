@@ -2,10 +2,6 @@ package ru.netolodgy.qa.javaqa_12;
 
 public class MoviePoster {
 
-    private int filmId;
-    private String genreFilm;
-    private String filmName;
-
     private String[] movies = new String[0];
     private int limit;
 
@@ -18,35 +14,6 @@ public class MoviePoster {
         this.limit = limit;
     }
 
-    public MoviePoster(int filmId, String genreFilm, String filmName) {
-        this.filmId = filmId;
-        this.genreFilm = genreFilm;
-        this.filmName = filmName;
-    }
-
-    public int getFilmId() {
-        return filmId;
-    }
-
-    public void setFilmId(int filmId) {
-        this.filmId = filmId;
-    }
-
-    public String getGenreFilm() {
-        return genreFilm;
-    }
-
-    public void setGenreFilm(String genreFilm) {
-        this.genreFilm = genreFilm;
-    }
-
-    public String getFilmName() {
-        return filmName;
-    }
-
-    public void setFilmName(String filmName) {
-        this.filmName = filmName;
-    }
 
     public void addMovie(String movie) {
         String[] tmp = new String[movies.length + 1];

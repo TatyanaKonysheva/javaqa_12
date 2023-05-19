@@ -5,12 +5,6 @@ import org.junit.jupiter.api.Test;
 
 public class MoviesManagerTest {
 
-    MoviePoster Film1 = new MoviePoster(111, "Бладшот", "Боевик");
-    MoviePoster Film2 = new MoviePoster(222, "Вперед", "Мультфильм");
-    MoviePoster Film3 = new MoviePoster(333, "Отель", "Комедия");
-    MoviePoster Film4 = new MoviePoster(444, "Джентельмены", "Боевик");
-    MoviePoster Film5 = new MoviePoster(555, "Человек-нивидимка", "Ужасы");
-    MoviePoster Film6 = new MoviePoster(666, "Тролли", "Мультфильм");
 
     @Test
     public void shouldToFindAll() {
@@ -129,45 +123,6 @@ public class MoviesManagerTest {
         String[] actual = manager.findLast();
 
         Assertions.assertArrayEquals(expected, actual);
-    }
-
-    @Test
-    public void shouldSetFilmId() {
-        MoviePoster manager = new MoviePoster();
-
-        manager.setFilmId(111);
-//        manager.setFilmName("Тролли. Мировой тур.");
-//        manager.setGenreFilm("Мультфильм");
-
-
-        int expected = 111;
-        int actual = manager.getFilmId();
-
-        Assertions.assertEquals(expected, actual);
-    }
-
-    @Test
-    public void shouldSetFilmName() {
-        MoviePoster manager = new MoviePoster();
-
-        manager.setFilmName("Тролли. Мировой тур.");
-
-        String expected = "Тролли. Мировой тур.";
-        String actual = manager.getFilmName();
-
-        Assertions.assertEquals(expected, actual);
-    }
-
-    @Test
-    public void shouldSetGenreFilm() {
-        MoviePoster manager = new MoviePoster();
-
-        manager.setGenreFilm("Мультфильм");
-
-        String expected = "Мультфильм";
-        String actual = manager.getGenreFilm();
-
-        Assertions.assertEquals(expected, actual);
     }
 
 }
